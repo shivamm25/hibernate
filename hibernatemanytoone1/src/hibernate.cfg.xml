@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	<hibernate-configuration>
+	<session-factory>
+	
+	<!-- DB configuration -->
+	<property name="connection.driver">com.mysql.jdbc.Driver</property>
+	<property name="connection.url">jdbc:mysql://localhost:3306/hibernateonetone1</property>
+	<property name="connection.user">root</property>
+	<property name="connection.password">shivamm25</property>
+	
+	
+	<!-- Dialect property -->
+	<property name="show_sql">true</property>
+	<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+	 <property name="hbm2ddl.auto">update</property>
+	
+	
+	<!-- mapping configuration -->
+	<mapping class="com.lazy.hibernatemanytoone1.entity.Mentor"/>
+	<mapping class="com.lazy.hibernateonetoone1.entity.Student"/>
+	</session-factory>
+	</hibernate-configuration>
