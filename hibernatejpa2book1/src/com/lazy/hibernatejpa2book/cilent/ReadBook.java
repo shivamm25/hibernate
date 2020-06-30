@@ -5,6 +5,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import com.lazy.hibernatejpa2book.entity.Author;
+
 public class ReadBook {
 
 	public static void main(String[] args) {
@@ -15,11 +17,18 @@ public class ReadBook {
 		EntityTransaction entityTransaction = entityManager.getTransaction();
 		entityTransaction.begin();
 		
+		Author author= entityManager.find(Author.class, 1);
+		
+		System.err.println(author);
+		
+		
 		entityTransaction.commit();
 		if(entityManager!=null)
 		{
 			entityManager.close();
 		}
+		
+	
 
 	}
 // need to do this file
