@@ -43,6 +43,14 @@ public class EmpAccount {
 	public String toString() {
 		return "EmpAccount [id=" + id + ", number=" + number + "]";
 	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
 	
 	
 	

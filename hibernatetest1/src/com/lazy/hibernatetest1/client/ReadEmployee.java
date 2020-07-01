@@ -19,9 +19,12 @@ public class ReadEmployee {
 	transaction.begin();
 	 
 	 EmpAccount account = new EmpAccount();
-	 account.setNumber("QWerty1234");
-	 
 	 Employee employee = new Employee();
+	 
+	 account.setNumber("QWerty1234");
+	 account.setEmployee(employee);
+	 
+	
 	 employee.setName("shivame");
 	 employee.setContact(9873122665l);
 	 employee.setCompanyName("fresher");
